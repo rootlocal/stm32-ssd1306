@@ -11,8 +11,13 @@
 add_subdirectory(ssd1306)
 ~~~
 
-3. создать директорию ssd1306 и скопировать файлы библиотеки в ssd1306
-4. Добавить главный сценарий CMake в CMakeLists.txt и CMakeLists_template.txt
+3. added git submodule
+
+~~~shell 
+git submodule add git@github.com:rootlocal/stm32-ssd1306.git libs/ssd1306 
+~~~
+
+4. Добавить в главный сценарий CMake в CMakeLists.txt и CMakeLists_template.txt
 
 ~~~cmake
 #THIS FILE IS AUTO GENERATED FROM THE TEMPLATE! DO NOT CHANGE!
@@ -118,7 +123,7 @@ Building ${BIN_FILE}")
 ################################
 ~~~
 
-5. зоздать Core/Inc/ssd1306_conf.h
+5. создать Core/Inc/ssd1306_conf.h
 
 ~~~c
 /**
